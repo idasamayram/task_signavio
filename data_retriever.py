@@ -11,7 +11,7 @@ revision_url = base_url + '/p/model/' + diagram_ID + '/revisions'      #GET/p/mo
                                                                        #Requests the id and the request headers, then responses the meta data of each id's revision.
 format = 'json'                                                        # data format: json, bpmn2_0_xml, PNG or SVG           
 
-auth_data = authenticate()                                             #reretrieving cookie values and headers from authenticate function
+auth_data = authenticate()                                             #retrieving cookie values and headers from authenticate function
 
 # set credentials, response format
 cookies = {'JSESSIONID': auth_data['jsesssion_ID'], 'LBROUTEID': auth_data['lb_route_ID']}

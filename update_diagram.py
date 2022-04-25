@@ -14,7 +14,7 @@ model_url = base_url + '/p/model'  #Retrieving the current meta data of the diag
 
 auth_data = authenticate()
 
-# set credentials, response format
+#set credentials, response format
 cookies = {'JSESSIONID': auth_data['jsesssion_ID'], 'LBROUTEID': auth_data['lb_route_ID']}
 headers = {'Accept': 'application/json',
            'x-signavio-id':  auth_data['auth_token']}

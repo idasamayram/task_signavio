@@ -8,7 +8,9 @@ These scripts are for performing the following tasks according to the documentat
 The scripts are structured in tho following form:
 
 **1. First task structure**
-
+First,the file containing user-specific variables has been created: conf.py
+Running the authentication.py will send the login requests to Signavio Process Manager and obtains the access token and session ID, the request will be sent by post function, becuase it contains the username and password, so should not be chached or stored in browser history. The token ID will be decoded in utf-8 format and two set of cookie values for session ID and routing the requuest will be retrieved in the format of JSON document.
+Authentication tasks takes place 
 
 **2. Second task structure** 
 The [file_importer.py](file_importer.py) file is designed to import all files in a specific floder by providing the directory ID and directory name.  

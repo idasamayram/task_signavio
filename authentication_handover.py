@@ -3,7 +3,7 @@ import requests
 from conf import *
 from authentication import authenticate
 
-login_url = base_url + '/p/login'              #GET/p/login:Requests Headers and JSON Parameters(authhandovertoken and redirect) 
+login_url = base_url + '/p/login'              #GET/p/login:Requests Headers and JSON parameters(authhandovertoken and redirect) 
                                                #and Responses the Set-Cookie for identifier, login,token, and session_ID, as well as token_ID and status codes
 
 handover_url = base_url + '/p/authhandover'    #POST/p/authhandover:Requests headers and forms the response

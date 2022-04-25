@@ -18,11 +18,9 @@ Authentication tasks takes place via GET request, this could be done via POSTMAN
 
 **2. Second task structure**
 
-The [file_importer.py](file_importer.py) file is designed to import all files in a specific floder by providing the directory ID and directory name.  
-* Firstly, it obtains the access token and session ID by making a POST request using [authentication.py](authentication.py) script and the cookies and headers are set accordingly.
-* The import_file function gets each file's name and path and makes a POST request with the defined headers, cookies, and file's information
-(e.g. file name and directory ID) and prints out the content of the post request. 
-* Thus, using the import_file function and directory name, the corresponding file would be imported.
+* Here using the GET/p/model request, the meta data(info,views,status,parents,subscription,priv) of a diagram cab be read, adding subendpoint to the request can retrieve specific data such as glossaryinfo or subscription of a diagram.
+
+* [data_retriever.py ](data_retriever.py ) uses the GET/p/model/(id)/revisions requests to retrieve a diagram’s list of revisions, together with each diagram revision’s metadata. it requests the Parameters(diagram id) and Request Headers(X-Signavio-ID,Accept, and Cookie) and responses as a JSON array containing the IDs and meta information of all revisions of the corresponding diagram(status code, and response headers). Using the format JSON, the output will be printed as a json object.
 
 **3. Third task structure**
 

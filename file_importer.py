@@ -1,6 +1,6 @@
 import codecs, os, requests
 from conf import *
-from authentication.authenticate import authenticate
+from authentication import authenticate
 
 # user variables
 directory_ID = '<directory_ID>'  # ID of the target directory
@@ -16,8 +16,7 @@ cookies = {'JSESSIONID': auth_data['jsesssion_ID'], 'LBROUTEID': auth_data['lb_r
 headers = {'Accept': 'application/json', 'x-signavio-id':  auth_data['auth_token']}
 #  import file
 def import_file(filename, filepath):
-    with codecs.open(filepath, 'r', 'utf-8')\
-            as file_import_stream:
+    with codecs.open(filepath, 'r', 'utf-8') as file_import_stream:
         file_import_str = file_import_stream.read()
         import_request = requests.post(import_url, cookies=cookies, headers=headers, files={'bpmn2_0file': (filename, file_import_str)}, data={'directory': directory_ID, 'filename': filename})
         print(filepath + ': ' + str(import_request.content))

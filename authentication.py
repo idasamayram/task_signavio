@@ -3,7 +3,7 @@ from conf import *
 
 
 def authenticate():
-    login_url = base_url + '/p/login'   #POST/p/login: Requests Headers and forms the data parameters
+    login_url = base_url + '/p/login'   #POST/p/login: Requests headers and forms the data parameters
 
     data = {'name': username,'password': password,'tokenonly': 'true'}  #gets the data from conf
     #if the user is in multiple workspaces, this additional data is also being handed out to server:

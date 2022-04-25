@@ -8,8 +8,8 @@ directory_ID = '<directory_ID>'  # ID of the target directory
 dir_name = 'files'
 
 import_url = base_url + '/p/bpmn2_0-import'
-
-auth_data = authenticate()
+ 
+auth_data = authenticate()        #retrieve data from authenticate function
 
 # set credentials, response format
 cookies = {'JSESSIONID': auth_data['jsesssion_ID'], 'LBROUTEID': auth_data['lb_route_ID']}

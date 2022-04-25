@@ -12,8 +12,8 @@ def authenticate():
     # authenticate using post
     login_request = requests.post(login_url, data)   
     # retrieve token and session ID
-    auth_token = login_request.content.decode('utf-8')  # retrieve access token and decodes in utf-8 format
-    jsesssion_ID = login_request.cookies['JSESSIONID']  # cookie values for session ID 
+    auth_token = login_request.content.decode('utf-8')  #Decodes access token in utf-8 format
+    jsesssion_ID = login_request.cookies['JSESSIONID']  #Cookie values for session ID 
 
     # The cookie is named 'LBROUTEID' for base_url 'editor.signavio.com' (which we need here),
     # 'AWSELB' for base_url 'app-au.signavio.com' and 'app-us.signavio.com'
